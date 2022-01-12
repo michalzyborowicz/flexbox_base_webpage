@@ -63,8 +63,36 @@ body {
 		&::before {
 			top: 27px;
 			width: 30%;
-			transition-delay: .1s;
-			
+			transition-delay: 0.1s;
 		}
+	}
+}
+
+//HEADER
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: $pure-white;
+	@include heroImages('../img/header-small.jpg');
+	background-attachment: scroll;
+
+	&__heading {
+		font-family: 'Dancing Script', cursive;
+		font-size: 4.8rem;
+		font-weight: 300;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+	&__btn {
+		background: $pure-white;margin-top: 2em;
 	}
 }

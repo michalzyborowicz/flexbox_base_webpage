@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "Kurs 3",
+			"path": "../Kurs 3"
+		},
+		{
+			"name": "MMC Schools",
+			"path": "../MMC Schools"
+		},
+		{
+			"name": "50_projects",
+			"path": "../50_projects"
+		},
+		{
+			"name": "Kurs 2",
+			"path": "../Kurs 2"
+		},
+		{
+			"path": "../zabawy z gitem"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Kurs 3"
+	}
+}

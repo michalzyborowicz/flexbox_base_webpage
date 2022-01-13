@@ -68,6 +68,50 @@ body {
 	}
 }
 
+.nav {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	transform: translateX(100%);
+	background-image: $blue-gradient-solid;
+	transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+	z-index: 100;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		color: $pure-white;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			background-color: $pure-white;
+			transform: scaleY(0);
+			content: '';
+			transition: transform 0.3s;
+		}
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+}
+
 //HEADER
 
 .header {
@@ -93,6 +137,71 @@ body {
 		font-size: 1.4rem;
 	}
 	&__btn {
-		background: $pure-white;margin-top: 2em;
+		background: $pure-white;
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		border: none;
+		border-radius: 8px;
+		color: $dark;
+		text-transform: uppercase;
+		text-decoration: none;
+		cursor: pointer;
+
+		&::before {
+			background-color: $light-white;
+		}
+	}
+}
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+.nav-items-animation {
+	animation: navItemsAnimation 1s;
+}
+
+//============================
+//MEDIA
+//============================
+
+@media (min-width: 768px) {
+	.white-block {
+		height: 50px;
+		width: 45%;
+	}
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+		&__text {
+			font-size: 2.2rem;
+		}
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+
+	.white-block {
+		height: 50px;
+		width: 45%;
+	}
+	.header {
+		background-image: $blue-gradient, url('../img/header-big.jpg');
+
+		&__heading {
+			font-size: 10rem;
+		}
 	}
 }

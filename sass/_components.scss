@@ -19,7 +19,7 @@
 		transform: skew(45deg);
 	}
 }
-.btn--special-animation {
+.btn-special-animation {
 	position: relative;
 	transition: background-color 0.3s;
 	overflow: hidden;
@@ -28,7 +28,7 @@
 	&::before {
 		display: block;
 		content: '';
-		position: relative;
+		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -39,7 +39,7 @@
 		z-index: -1;
 	}
 
-	&:hover {
+	&:hover::before {
 		transform: scaleX(1);
 		transform-origin: left;
 	}

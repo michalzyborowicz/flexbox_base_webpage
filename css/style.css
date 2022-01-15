@@ -270,8 +270,8 @@ body {
 }
 
 .nav-items-animation {
-  -webkit-animation: navItemsAnimation 1s;
-          animation: navItemsAnimation 1s;
+  -webkit-animation: navItemsAnimation 1s both;
+          animation: navItemsAnimation 1s both;
 }
 
 @media (min-width: 768px) {

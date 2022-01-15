@@ -10,18 +10,16 @@ const handleNav = () => {
 			nav.classList.remove('nav--active')
 		})
 	})
-    handleNavItemsAnimation()
+	handleNavItemsAnimation()
 }
 
-const handleNavItemsAnimation = ()=>{
-let delayTime =0
-navItem.forEach(item => {
-item.classList.toggle('nav-items-Animation')
-
-
-})
-
-
+const handleNavItemsAnimation = () => {
+	let delayTime = 0
+	navItem.forEach(item => {
+		item.classList.toggle('nav-items-animation')
+		item.style.animationDelay = '.' + delayTime + 's'
+		delayTime++
+	})
 }
 
 burgerBtn.addEventListener('click', handleNav)

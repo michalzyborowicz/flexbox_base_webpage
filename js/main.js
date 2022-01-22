@@ -7,6 +7,7 @@ const footerYear = document.querySelector('.footer__year')
 
 const handleNav = () => {
 	nav.classList.toggle('nav--active')
+	navBtnbars.classList.remove('black-bars-color')
 
 	navItem.forEach(item => {
 		item.addEventListener('click', () => {
@@ -35,7 +36,7 @@ const handleObserver = () => {
 	allSections.forEach(section => {
 		if (section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
 			navBtnbars.classList.add('black-bars-color')
-		} else if(!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60){
+		} else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
 			navBtnbars.classList.remove('black-bars-color')
 		}
 	})
